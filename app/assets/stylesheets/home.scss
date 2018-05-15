@@ -1,0 +1,114 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+  magin:0px;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.div_nav{
+  background-color: lightgrey;
+  background-position: center;
+  background-size: cover;
+  height: 200px;
+}
+
+.nav_bar{
+  background-color: rgba(0,0,0, 0.01);
+  display:flex;
+  justify-content: flex-end;
+  font-size: 20px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.first-section{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title-1{
+  color: white;
+  font-size:14px;
+}
+.title-2{
+  color:white;
+  font-size:14px;
+  margin-bottom: 20px;
+}
+
+.quote_container{
+  background-color: lightgrey;
+  background-position: center;
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.quote_catagory{
+  margin-left: 20px;
+  font-size: 16px;
+  height: 30px;
+}
+
+
+
+#about_me{
+  display:flex;
+  justify-content: center;
+  margin:20px;
+  padding-bottom: 40px;
+  font-size:25px;
+}
+h3{
+  display:flex;
+  justify-content: center;
+  margin:10px;
+}
+.skills-interest-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.skills{
+  border: 1px solid black;
+  border-radius: 1px;
+  font-size:20px;
+
+}
+.interests{
+  border: 1px solid black;
+  border-radius: 1px;
+  font-size:20px;
+}
+#contact-me{
+  color:black;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+  margin-left: 80px;
+}
+.contact-title{
+  color:black;
+  font-size: 35px;
+  margin:20px;
+  display: flex;
+  justify-content: center;
+
+}
+
+ul{
+  list-style-type: none;
+}
+
+footer{
+  background-color: lightgrey;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+}

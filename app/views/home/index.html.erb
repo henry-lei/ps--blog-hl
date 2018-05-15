@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+    <title>Henry`s landing page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+<body>
+  <div class="div_nav">
+    <nav class="nav_bar">
+      <ul class="nav-items">
+         <a href="#about_me">About Me</a>
+         <a href="#contact">Contact</a>
+         <a href="#blog">Blog</a>
+       </ul>
+    </nav>
+    <div class="first-section">
+      <h1 class="title-1">Hi,I`m Henry</h1>
+      <br>
+      <h2 class="title-2">Welcome to my website</h2>
+    </div>
+
+  </div>
+  <div class="div_about">
+    <div class="container">
+      <div id="about_me">
+        <h2 class="about_title">About Me</h2>
+
+      </div>
+      <div class="skills-interest-container">
+      <div class="skills">
+        <h3 class="skills-title">My Skills</h3>
+        <ul class="skills-list">
+          <li>
+            teaching
+          </li>
+          <li>
+            thinking
+          </li>
+          <li>
+            drinking
+          </li>
+        </ul>
+
+      </div>
+      <div class="interests">
+        <h3 class="interests_title">My Interests</h3>
+        <ul class="interests-list">
+          <li>
+            teaching
+          </li>
+          <li>
+            thinking
+          </li>
+          <li>
+            drinking
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+    </div>
+    <div class="second-section">
+
+    </div>
+
+  </div>
+  <hr></hr>
+  <div class="quote_container">
+    <div class="quote_content">
+      <div class="quote_author">
+        <textarea rows="1" cols="10 " id="author">Author</textarea>
+      </div>
+      <div class="quote_value">
+        <textarea rows="6" cols="50 " id="quote">Quote Of The Day</textarea>
+      </div>
+    </div>
+    <div class = "quote_catagory">
+    <h5>Catagory</h5>
+    <select size="6";name="catagory_selector">
+      <option value="inspire">Inspire</option>
+      <option value="love">Love</option>
+      <option value="funny">Funny</option>
+      <option value="life">Life</option>
+      <option value="sports">Sports</option>
+      <option value="art">Art</option>
+    </select>
+    </div>
+  </div>
+  <script type="text/javascript">
+
+      const cat1 = "inspire";
+
+
+      $.ajax({
+      url: 'api/v1/quote',
+      type: 'GET',
+      data: { catagory:cat1 } ,
+      contentType: 'application/json; charset=utf-8',
+      success: function (response) {
+        console.log(response);
+      },
+      error: function (error) {
+        console.log(error);
+      }
+      });
+
+
+
+  </script>
+  <hr></hr>
+  <div id="contact">
+    <h2 class="contact-title">Contact Me</h2>
+    <form id="contact-me">
+      <div>
+        <input type="text";required="required";value="name";/>Name
+      </div>
+      <div>
+        <input type="email";required="required";value="Email";/>Email
+      </div>
+      <div>
+        <textarea></textarea>
+      </div>
+      <div class="submit-button">
+        <input type="submit";required="required";value="Submit";/>
+      </div>
+
+    </form>
+
+  </div>
+  <div class="div_blog">
+
+  </div>
+  <footer>
+    <div class="copyright">
+      <p>
+        Copyright (c) 2017 Copyright Henry All Rights Reserved.
+      </p>
+
+    </div>
+  </footer>
+
+<%=link_to 'Posts', posts_path,:class=>"btn btn-primary"%>
+
+
+
+</body>
+</html>
