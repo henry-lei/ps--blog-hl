@@ -76,9 +76,9 @@
         <textarea rows="6" cols="50 " id="quote">Quote Of The Day</textarea>
       </div>
     </div>
-    <div class = "quote_catagory">
+    <div class = "quote_category">
     <h5>Catagory</h5>
-    <select size="6";name="catagory_selector">
+    <select id="category" size="6";name="category_selector" onChange="setCategory()">
       <option value="inspire">Inspire</option>
       <option value="love">Love</option>
       <option value="funny">Funny</option>
@@ -90,21 +90,38 @@
   </div>
   <script type="text/javascript">
 
-      const cat1 = "inspire";
 
 
-      $.ajax({
-      url: 'api/v1/quote',
-      type: 'GET',
-      data: { catagory:cat1 } ,
-      contentType: 'application/json; charset=utf-8',
-      success: function (response) {
-        console.log(response);
-      },
-      error: function (error) {
-        console.log(error);
+      function setCategory() {
+        const category1 = $('#category').val();
+        $.ajax({
+        url: 'api/v1/quote',
+        type: 'GET',
+        data: { category:category1 } ,
+        contentType: 'application/json; charset=utf-8',
+        success: function (response) {
+          //$("#quote")
+          //console.log(response);
+          //console.log(response.contents)
+          //console.log(response.contents.quotes)
+          //console.log(response.contents.quotes[0])
+          //console.log(response.contents.quotes[0].quote)
+          var quote1 = response.contents.quotes[0].quote
+          var author1 = response.contents.quotes[0].author
+          var category2 = response.contents.quotes[0].category
+          $("#author").val(author1);
+          $("#quote").val(quote1);
+          console.log(category2);
+        },
+        error: function (error) {
+          console.log(error);
+        }
+        });
+        //console.log("CATEGORY")
+        //console.log(category)
       }
-      });
+
+      //function getQuoteWithCategory() {
 
 
 

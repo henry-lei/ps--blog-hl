@@ -10,10 +10,10 @@ a{
 }
 
 .div_nav{
-  background-color: lightgrey;
+  background-image: image_url("background_img.jpg");
   background-position: center;
-  background-size: cover;
-  height: 200px;
+  background-size:auto;
+
 }
 
 .nav_bar{
@@ -49,7 +49,7 @@ a{
   flex-direction: row;
 }
 
-.quote_catagory{
+.quote_category{
   margin-left: 20px;
   font-size: 16px;
   height: 30px;
